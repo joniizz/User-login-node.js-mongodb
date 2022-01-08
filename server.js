@@ -34,6 +34,11 @@ app.get("/", (req, res) => {
     res.json({message: "Welcome to my application!"});
 });
 
+//routes
+require("./app/routes/auth.routes")(app);
+require("./app/routes/user.routes")(app);
+
 app.listen("8080", () => {
     console.log("Server is running on port 8080");
 });
+
